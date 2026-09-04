@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+
+# Benchmark instances auto-downloaded by src/data_loader.py from the
+# Hugging Face dataset (hundreds of MB each -- never commit them)
+data/*_data/
+data/.cache/
+
+# Unshipped extras drawn by generate_paper_figures.py (not paper figures)
+results/figures/quality_box_*.pdf
+results/figures/warmip_vs_ip_*_pooled.pdf

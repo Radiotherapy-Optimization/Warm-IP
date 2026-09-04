@@ -1,0 +1,20 @@
+# Core requirements (Warm-IP solver + data loading + benchmarks + figures)
+numpy>=1.24
+scipy>=1.10
+pandas>=1.5
+h5py>=3.8
+matplotlib>=3.7
+psutil>=5.9
+sparse_dot_mkl>=0.9      # sparse MKL products + PARDISO bindings
+mkl>=2023                 # Intel MKL runtime used by sparse_dot_mkl / PARDISO
+huggingface_hub>=0.20     # automatic benchmark-data download (src/data_loader.py)
+
+# Optional: competing solvers used by the benchmark scripts. Each solver runs
+# in its own try/except, so a missing package only blanks that solver's
+# columns. MOSEK and Gurobi additionally require a license.
+# piqp>=0.4
+# clarabel>=0.9
+# osqp>=0.6
+# cvxpy>=1.4               # MOSEK is called through CVXPY
+# Mosek>=11.2
+# gurobipy>=11.0
